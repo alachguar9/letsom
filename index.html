@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mode Express - Votre style, notre passion</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="header-container">
+            <a href="index.html" class="logo" aria-label="Accueil Mode Express">
+                <img src="logo.svg" alt="Logo Mode Express" id="site-logo" />
+            </a>
+
+            <nav class="main-nav" aria-label="Navigation principale">
+                <ul>
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="nouveautes.html">Nouveautés</a></li>
+                    <极li><a href="femmes.html">Femmes</a></li>
+                    <li><a href="hommes.html">Hommes</a></li>
+                    <li><a href="enfants.html">Enfants</a></li>
+                    <li><a href="beaute.html">Beauté</a></li>
+                </ul>
+            </nav>
+
+            <div class="header-actions">
+                <div class="search-bar">
+                    <input type="text" placeholder="Rechercher..." aria-label="Recherche" />
+                    <button><i class="fas fa-search"></i></button>
+                </div>
+                <button id="cart-btn" class="cart-button" aria-label="Voir le panier">
+                    <i class="fas fa-shopping-cart"></i> <span id="cart-count">0</span>
+                </button>
+                <div class="auth-links">
+                    <a href="login.html" aria-label="Connexion"><i class="fas fa-user"></i></a>
+                    <a href="signup.html" aria-label="Inscription"><i class="fas fa-user-plus"></i></a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="index-hero">
+        <h1>Découvrez la mode qui vous ressemble</h1>
+        <p>Des pièces uniques, des prix imbattables et un style inégalé</p>
+        <a href="#featured" class="btn">Découvrir la collection</a>
+    </section>
+
+    <section id="featured" class="featured-products">
+        <h2>Produits en vedette</h2>
+        <div class="index-products">
+            <!-- Les produits seront chargés ici par JavaScript -->
+        </div>
+    </section>
+
+    <script src="app.js"></script>
+    
+    <!-- Modal du panier -->
+    <div id="cart-modal" class="cart-modal" aria-hidden="true" role="dialog" aria-labelledby="modal-title">
+        <div class="modal-content">
+            <div class="cart-header">
+                <h2 id="modal-title">Votre Panier</h2>
+                <button class="modal-close" aria-label="Fermer le panier">&times;</button>
+            </div>
+            <div class="cart-items-container" id="cart-items-container"></div>
+            <div class="cart-summary">
+                <div class="cart-total">
+                    <span>Total :</span>
+                    <span id="cart-total-price">0.00</span> €
+                </div>
+                <button id="checkout-btn" class="checkout-btn">Passer la commande</button>
+            </极div>
+        </div>
+    </div>
+</body>
+</html>

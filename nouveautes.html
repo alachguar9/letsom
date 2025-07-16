@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mode Express - Nouveautés</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="/" aria-label="Accueil">
+                <img src="logo.svg" alt="ModeExpress Logo" id="site-logo">
+            </a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="nouveautes.html">Nouveautés</a></li>
+                <li><a href="femmes.html">Femmes</a></li>
+                <li><a href="hommes.html">Hommes</a></li>
+                <li><a href="enfants.html">Enfants</a></li>
+                <li><a href="beaute.html">Beauté</a></li>
+                <li><a href="bottes-securite.html">Bottes de sécurité</a></li>
+            </ul>
+        </nav>
+        <div class="header-right">
+            <div class="search-cart">
+                <input type="text" placeholder="Rechercher des produits...">
+                <button id="cart-btn">Panier (0)</button>
+            </div>
+            <div class="auth-links">
+                <a href="login.html" id="login-link">Connexion</a>
+                <a href="login.html" id="signup-link">Inscription</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h1>Découvrez nos dernières nouveautés</h1>
+            <p>Les tendances fraîchement arrivées en exclusivité</p>
+        </section>
+
+        <section class="products">
+            <!-- Produits chargés dynamiquement -->
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 ModeExpress. Tous droits réservés.</p>
+    </footer>
+
+    <script src="app.js"></script>
+    <div id="cart-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Votre Panier</h2>
+            <div id="cart-items-container"></div>
+            <div class="cart-total">
+                <strong>Total:</strong> <span id="cart-total-price">0.00</span>€
+            </div>
+            <button id="checkout-btn">Passer la commande</button>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin - Mode Express</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="container header-container">
+            <a href="index.html" class="logo" aria-label="Accueil Mode Express">
+                <img src="logo.svg" alt="Logo Mode Express" id="site-logo" />
+            </a>
+
+            <nav class="main-nav" aria-label="Navigation principale">
+                <ul>
+                    <li><a href="admin.html">Commandes</a></li>
+                </ul>
+            </nav>
+
+            <div class="header-actions">
+                <div class="search-bar">
+                    <input type="text" placeholder="Rechercher..." aria-label="Recherche" />
+                    <button><i class="fas fa-search"></i></button>
+                </div>
+                <button id="cart-btn" class="cart-button" aria-label="Voir le panier">
+                    <i class="fas fa-shopping-cart"></i> <span id="cart-count">0</span>
+                </button>
+                <div class="auth-links">
+                    <a href="login.html" aria-label="Connexion"><i class="fas fa-user"></i></a>
+                    <a href="signup.html" aria-label="Inscription"><i class="fas fa-user-plus"></i></a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="admin-container">
+        <div class="dashboard-summary">
+            <div class="summary-card">
+                <h3>Total Commandes</h3>
+                <p id="total-orders">0</p>
+            </div>
+            <div class="summary-card">
+                <h3>Revenu Total</h3>
+                <p id="total-revenue">0.00€</p>
+            </div>
+            <div class="summary-card">
+                <h3>Produits Vendus</h3>
+                <p id="total-products-sold">0</p>
+            </div>
+        </div>
+
+        <h1>Liste des Commandes</h1>
+        <div id="orders-container">
+            <!-- Orders will be loaded here -->
+        </div>
+    </main>
+
+    <script src="app.js"></script>
+    <div id="cart-modal" class="modal" aria-hidden="true" role="dialog" aria-labelledby="modal-title">
+        <div class="modal-content">
+            <button class="modal-close" aria-label="Fermer le panier">&times;</button>
+            <h2 id="modal-title">Votre Panier</h2>
+            <div id="cart-items-container"></div>
+            <div class="cart-total">
+                <strong>Total :</strong> <span id="cart-total-price">0.00</span> €
+            </div>
+            <button id="checkout-btn" onclick="window.location.href='checkout.html'">Passer la commande</button>
+        </div>
+    </div>
+</body>
+</html>
